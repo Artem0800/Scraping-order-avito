@@ -6,7 +6,7 @@ from site5 import site5
 
 def main():
     # Вставляем артикул
-    output_user = "3211070" 
+    output_user = input("Введите артикул:")
 
     try:
         site1(output_user)
