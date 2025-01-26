@@ -23,6 +23,8 @@ def site5(article):
     price = ""
     for i, j, h in zip(soup.find_all("span", class_="general-price"), soup.find_all("div", class_="tm-product-name-container")
                        , soup.find_all("span", class_="goods-not-available")):
+        if "Нет в наличии." in h.text.strip():
+            continue
         price += j.text.strip() + " | " + i.text.strip() + " | " + h.text.strip() + "\n"
 
     print("Сайт: https://www.technomarin.ru/")
