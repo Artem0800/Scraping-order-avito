@@ -15,7 +15,10 @@ def site4(article):
     soup = BeautifulSoup(page, "lxml")
 
     price = ""
-    for i, j in zip(soup.find_all("div", class_="price"), soup.find_all("div", class_="item-title")):
+    for i, j, n in zip(soup.find_all("div", class_="price"), soup.find_all("div", class_="item-title"),
+                       soup.find_all("span", class_="value")):
+        if "Есть в наличии" not in n.text:
+            continue
         price += j.text.strip() + " | " + i.text.strip() + "\n"
 
     print("Сайт: https://yamahatula.ru/index.php")

@@ -14,11 +14,11 @@ def site1(article):
 
     soup = BeautifulSoup(page, "lxml")
 
-    price = soup.find("tr", class_="even").find("td", align="right").find("nobr").text.strip().split()
-    del price[-1]
-    res_price = " ".join(price)
-
-    name = soup.find("tr", class_="even").find("td", align="left").text.strip()
+    txt = ""
+    for i in soup.find_all("tr", style="background: #FFE7CE; font-weight: bold"):
+        name = i.find("td", align="left").text.strip()
+        price = i.find("td", align="right").text.strip()
+        txt += name + " | " + price + "\n"
 
     print("Сайт: http://www.atvleader.ru/")
-    print(f"{name} | {res_price}")
+    print(txt.strip())
