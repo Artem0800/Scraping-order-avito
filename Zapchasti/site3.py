@@ -13,9 +13,21 @@ def site3(article):
 
     soup = BeautifulSoup(page, "lxml")
 
-    price = soup.find("div", class_="product clearfix").find("span", class_="price").find("span", class_="cost").text + " р."
-    name = soup.find("div", class_="product clearfix").find("a", class_="zoom").find("img").get("alt")
+    try:
+        price = soup.find("div", class_="product clearfix").find("span", class_="price").find("span", class_="cost").text + " р."
+        name = soup.find("div", class_="product clearfix").find("a", class_="zoom").find("img").get("alt")
+        print("Сайт: https://atv-parts.ru/")
+        print(f"Цена: {price}")
+        print(f"Название: {name}")
+    except:
+        price = ""
+        for i in soup.find_all("div", class_="product_info"):
+            price += i.find("span", class_="cost").text + " р." + "\n"
 
-    print("Сайт: https://atv-parts.ru/")
-    print(f"Цена: {price}")
-    print(f"Название: {name}")
+        name = ""
+        for i in soup.find_all("div", class_="product_info"):
+            name += i.find("a", class_="fast-order-send-button send_item button_description").get("data-name") + "\n"
+
+        print("Сайт: https://atv-parts.ru/")
+        print(f"Цена: {price.strip()}")
+        print(f"Название: {name.strip()}")
