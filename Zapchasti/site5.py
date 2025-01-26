@@ -21,13 +21,8 @@ def site5(article):
     soup = BeautifulSoup(page, "lxml")
 
     price = ""
-    for i in soup.find_all("span", class_="general-price"):
-        price += i.text + "\n"
-
-    name = ""
-    for i in soup.find_all("div", class_="tm-product-name-container"):
-        name += i.text.strip() + "\n"
+    for i, j in zip(soup.find_all("span", class_="general-price"), soup.find_all("div", class_="tm-product-name-container")):
+        price += j.text.strip() + " | " + i.text.strip() + "\n"
 
     print("Сайт: https://www.technomarin.ru/")
-    print(f"Цена: {price.strip()}")
-    print(f"Название: {name.strip()}")
+    print(f"{price.strip()}")

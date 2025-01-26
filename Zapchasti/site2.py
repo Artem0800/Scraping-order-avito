@@ -13,9 +13,9 @@ def site2(article):
 
     soup = BeautifulSoup(page, "lxml")
 
-    price = soup.find("div", class_="p-thumbs__price").text
-    name = soup.find("div", class_="p-thumbs__text-name").text
+    price = ""
+    for i, j in zip(soup.find_all("div", class_="p-thumbs__price"), soup.find_all("div", class_="p-thumbs__text-name")):
+        price += j.text + " | " + i.text + "\n"
 
     print("Сайт: https://atvgear.ru/")
-    print(f"Цена: {price}")
-    print(f"Название: {name}")
+    print(f"{price.strip()}")

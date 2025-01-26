@@ -21,5 +21,4 @@ def site1(article):
     name = soup.find("tr", class_="even").find("td", align="left").text.strip()
 
     print("Сайт: http://www.atvleader.ru/")
-    print(f"Цена: {res_price}")
-    print(f"Название: {name}")
+    print(f"{name} | {res_price}")

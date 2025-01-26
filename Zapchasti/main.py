@@ -5,7 +5,8 @@ from site4 import site4
 from site5 import site5
 
 def main():
-    output_user = input("Введите артикул:")
+    # Вставляем артикул
+    output_user = "3211070" 
 
     try:
         site1(output_user)

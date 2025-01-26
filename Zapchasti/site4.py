@@ -14,9 +14,9 @@ def site4(article):
 
     soup = BeautifulSoup(page, "lxml")
 
-    price = soup.find("div", class_="price").text.strip()
-    name = soup.find("div", class_="item-title").text.strip()
+    price = ""
+    for i, j in zip(soup.find_all("div", class_="price"), soup.find_all("div", class_="item-title")):
+        price += j.text.strip() + " | " + i.text.strip() + "\n"
 
     print("Сайт: https://yamahatula.ru/index.php")
-    print(f"Цена: {price}")
-    print(f"Название: {name}")
+    print(f"{price.strip()}")
