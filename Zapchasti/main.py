@@ -6,7 +6,7 @@ from site5 import site5
 
 def main():
     # Вставляем артикул
-    output_user = input("Введите артикул:")
+    output_user = input("Введите артикул:").strip()
 
     try:
         site1(output_user)
@@ -18,7 +18,7 @@ def main():
     try:
         site2(output_user)
     except:
-        print("Сайт: https://atvgear.ru/")
+        print("Сайт: https://atvstyle.ru/")
         print("Сайт не смог найти товар по вашему артиклу")
     print("-" * 190)
 

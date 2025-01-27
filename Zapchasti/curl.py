@@ -20,32 +20,30 @@ headers = {
 }
 
 cookies2 = {
-    'landing': '%2F',
-    'pricetype_manual': '0',
-    'pricetype': '0',
-    '_ym_uid': '1737731498898199977',
-    '_ym_d': '1737731498',
+    'PHPSESSID': '45Iy7aNE0j6HwthOPB7mdJlxlkWc75dF',
+    '_ym_uid': '1737992214610808408',
+    'BITRIX_CONVERSION_CONTEXT_s1': '%7B%22ID%22%3A1%2C%22EXPIRE%22%3A1738011540%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D',
     '_ym_isad': '2',
-    'shop_view': '18791',
-    'pricetype_set': '1737733435',
+    'BX_USER_ID': 'ce9f369a2e0f472a7697994d28130404',
+    '_ym_d': '1737992382',
 }
 
 headers2 = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
-    'Cache-Control': 'max-age=0',
-    'Connection': 'keep-alive',
-    # 'Cookie': 'landing=%2F; pricetype_manual=0; pricetype=0; _ym_uid=1737731498898199977; _ym_d=1737731498; _ym_isad=2; shop_view=18791; pricetype_set=1737733435',
-    'Referer': 'https://atvgear.ru/search/?query=3211070',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'same-origin',
-    'Sec-Fetch-User': '?1',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'max-age=0',
+    # 'cookie': 'PHPSESSID=45Iy7aNE0j6HwthOPB7mdJlxlkWc75dF; _ym_uid=1737992214610808408; BITRIX_CONVERSION_CONTEXT_s1=%7B%22ID%22%3A1%2C%22EXPIRE%22%3A1738011540%2C%22UNIQUE%22%3A%5B%22conversion_visit_day%22%5D%7D; _ym_isad=2; BX_USER_ID=ce9f369a2e0f472a7697994d28130404; _ym_d=1737992382',
+    'priority': 'u=0, i',
+    'referer': 'https://atvstyle.ru/search/?q=w27esru',
     'sec-ch-ua': '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
 }
 
 cookies3 = {
